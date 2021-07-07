@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+
+#head1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 40px;
+}
+#cen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+}
+#but{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 5%;
+}
+button{
+    height: 40px;
+    width: 100px;
+    border: none;
+    color: blueviolet;
+    font-size: 20px;
+    background-color: lightgray;
+}
+button:hover{
+    background-color:aquamarine;
+}
+    </style>
+</head>
+<body>
+    <div id="cover">
+    <div id="head1">
+        <h1>Dice</h1>
+    </div>
+    <div id="cen">
+    <img src="d1.png" alt="" id="no" style="height: 200px; width: 200px;">
+    <img src="d1.png" alt="" id="no2" style="height: 200px; width: 200px;">
+    
+    </div>
+    <div id="but">
+    <button id="bt1" onclick="c()">click</button>
+    </div>
+    </div>
+<script>
+
+    function c(){
+        
+        var b = Math.floor(Math.random()*6)+1;
+        var dice = `d${b}.png`;
+        document.getElementById("no").setAttribute('src',dice);
+
+        var b = Math.floor(Math.random()*6)+1;
+        var dice = `d${b}.png`;
+        document.getElementById("no2").setAttribute('src',dice);
+    }
+</script>
+</body>
+</html>
